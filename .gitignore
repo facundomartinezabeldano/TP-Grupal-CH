@@ -2,3 +2,4 @@ venv-tp
 MueblesJuan/__pycache__
 products/__pycache__
 products/migrations
+.vscode
