@@ -2,8 +2,10 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request=request, template_name='index.html')
+    template = 'products/index_template_0.html'
+    return render(request=request, template_name=template)
 
 
 def faq(request):
-    return
+    template = 'products/faq.html'
+    return render(request=request, template_name=template)
