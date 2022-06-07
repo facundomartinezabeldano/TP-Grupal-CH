@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def home(request):
-    template = 'products.html'
+    template = 'index.html'
     return render(request=request, template_name=template)
 
 
