@@ -55,7 +55,9 @@ ROOT_URLCONF = 'MueblesJuan.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/facundo/Documents/Python Projects/tp_grupal_coder/TP-Grupal-CH/products/templates/'],
+        'DIRS': ['/home/facundo/Documents/Python Projects/tp_grupal_coder/TP-Grupal-CH/products/templates/',
+                 '/home/facundo/Documents/Python Projects/tp_grupal_coder/TP-Grupal-CH/products/templates/products/'
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
