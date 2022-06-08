@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import OrderForm
 
 
 def home(request):
@@ -15,5 +16,6 @@ def faq(request):
 
 def order(request):
     template = 'order.html'
-    context_payload = {}
-    return render(request=request, template_name=template, context=context_payload)
+    if request.method == 'POST':
+        orden = OrderForm()
+    return render(request=request, template_name=template, context={})

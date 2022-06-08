@@ -3,7 +3,6 @@ from django.forms import FloatField, IntegerField
 
 
 class Silla(models.Model):
-    id = models.IntegerField(primary_key=True)
     color = models.CharField(max_length=20)
     altura = models.FloatField()
     material = models.CharField(max_length=30)
@@ -12,7 +11,6 @@ class Silla(models.Model):
 
 
 class Escritorio(models.Model):
-    id = models.IntegerField(primary_key=True)
     color = models.CharField(max_length=20)
     altura = models.FloatField()
     material = models.CharField(max_length=30)
@@ -21,7 +19,6 @@ class Escritorio(models.Model):
 
 
 class Mesa (models.Model):
-    id = models.IntegerField(primary_key=True)
     color = models.CharField(max_length=20)
     altura = models.FloatField()
     material = models.CharField(max_length=30)
@@ -30,7 +27,6 @@ class Mesa (models.Model):
 
 
 class Sillon (models.Model):
-    id = models.IntegerField(primary_key=True)
     color = models.CharField(max_length=20)
     altura = models.FloatField()
     material = models.CharField(max_length=30)
