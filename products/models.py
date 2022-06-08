@@ -1,3 +1,4 @@
+from email import message
 from django.db import models
 from django.forms import FloatField, IntegerField
 
@@ -32,3 +33,18 @@ class Sillon (models.Model):
     material = models.CharField(max_length=30)
     precio = models.FloatField()
     stock = models.BooleanField()
+
+
+class Orden (models.Model):
+    choices = (
+        ('Silla', 'Silla'),
+        ('Escritorio', 'Escritorio'),
+        ('Sillon', 'Sillon'),
+        ('Mesa', 'Mesa')
+    )
+    name = models.CharField(max_length=30)
+    email = models.EmailField
+    producto = models.CharField(
+        max_length=30,
+        choices=choices)
+    message = models.CharField(max_length=300)
