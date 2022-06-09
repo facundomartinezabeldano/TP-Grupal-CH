@@ -14,7 +14,12 @@ def products(request):
     escritorios = Escritorio.objects.all()
     sillones = Sillon.objects.all()
     res = list(chain(sillas, mesas, escritorios, sillones))
-    payload = {'products': res}
+    payload = {'products': res,
+               'sillas': sillas,
+               'mesas': mesas,
+               'escritorios': escritorios,
+               'sillones': sillones
+               }
     print(res)
     return render(request=request, template_name=view, context=payload)
 

@@ -4,6 +4,7 @@ from django.forms import FloatField, IntegerField
 
 
 class Silla(models.Model):
+    nombre = models.CharField(max_length=30, default='Suizo')
     color = models.CharField(max_length=20)
     altura = models.FloatField()
     material = models.CharField(max_length=30)
@@ -12,6 +13,7 @@ class Silla(models.Model):
 
 
 class Escritorio(models.Model):
+    nombre = models.CharField(max_length=30, default='Suizo')
     color = models.CharField(max_length=20)
     altura = models.FloatField()
     material = models.CharField(max_length=30)
@@ -20,6 +22,7 @@ class Escritorio(models.Model):
 
 
 class Mesa (models.Model):
+    nombre = models.CharField(max_length=30, default='Suizo')
     color = models.CharField(max_length=20)
     altura = models.FloatField()
     material = models.CharField(max_length=30)
@@ -28,6 +31,7 @@ class Mesa (models.Model):
 
 
 class Sillon (models.Model):
+    nombre = models.CharField(max_length=30, default='Suizo')
     color = models.CharField(max_length=20)
     altura = models.FloatField()
     material = models.CharField(max_length=30)

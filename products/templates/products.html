@@ -18,9 +18,6 @@
                     <div class="portfolio-info">
                         <h4>Sillas</h4>
                         <div class="portfolio-links">
-                            <a href="{% static 'products/img/portfolio/portfolio-1.jpg' %}"
-                                data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i
-                                    class="bx bx-plus"></i></a>
                             <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                         </div>
                     </div>
@@ -33,8 +30,6 @@
                     <div class="portfolio-info">
                         <h4>Mesas</h4>
                         <div class="portfolio-links">
-                            <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                                class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
                             <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                         </div>
                     </div>
@@ -47,8 +42,6 @@
                     <div class="portfolio-info">
                         <h4>Sillones</h4>
                         <div class="portfolio-links">
-                            <a href="% static 'products/img/portfolio/portfolio-3.jpg'%" data-gallery="portfolioGallery"
-                                class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
                             <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                         </div>
                     </div>
@@ -57,11 +50,23 @@
         </div>
         <div class="section-title" data-aos="fade-up">
             <h2>Lista de muebles</h2>
-            {% for product in products %}
-            <h6>{{product.material}}</h6>
-            <h6>{{product.color}}</h6>
-            <h6>{{product.precio}}</h6>
+            <h4>Sillas</h4>
+            {% for silla in sillas %}
+            <div style="align-items: center;">
+                <h6>{{silla.nombre}}_____________${{silla.precio}}</h6>
+            </div>
             {% endfor %}
+            <br>
+            <h4>Escritorios</h4>
+            {% for escritorio in escritorios %}
+            <h6>{{escritorio.nombre}}_____________${{escritorio.precio}}</h6>
+            {% endfor %}
+            <br>
+            <h4>Mesas</h4>
+            {% for mesa in mesas %}
+            <h6>{{mesa.nombre}}_____________${{mesa.precio}}</h6>
+            {% endfor %}
+            <br>
         </div>
 
 </section><!-- End Portfolio Section -->
