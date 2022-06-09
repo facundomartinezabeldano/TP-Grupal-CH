@@ -21,23 +21,21 @@ def products(request):
 
 def order(request):
     template = 'order.html'
-    my_form = OrderForm(request.POST)
-    if my_form.is_valid():
-        payload = my_form.cleaned_data
-        order = Orden(
-            name=payload['name'],
-            email=payload['email'],
-            producto=payload['product'],
-            message=payload['message'],
+    if request.method == 'POST':
+        print(request.POST)
+        name = request.POST['name']
+        email = request.POST['email']
+        product_name = request.POST['product']
+        message = request.POST['message']
+        orden = Orden(
+            name=name,
+            email=email,
+            product=product_name,
+            message=message
         )
-        order.save()
-        template = 'success.html'
-        return render(request=request, template_name=template, context={})
-    else:
-        my_form = OrderForm()
-        return render(request=request, template_name=template, context={'form': my_form})
+        orden.save()
+    return render(request=request, template_name=template, context={})
 
 
 def success(request):
-    template = 'success.html'
-    return render(request=request, template_name=template, context={})
+    pass

@@ -12,37 +12,26 @@
         </div>
 
     </div>
-
-    <div class="row mt-5 justify-content-center" data-aos="fade-up">
-        <div class="col-lg-10">
-            <form action="{% url 'success' %}" method="POST" role="form" class="php-email-form">{% csrf_token %}
-                <div class="row">
-                    <div class="col-md-6 form-group">
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="col-md-6 form-group mt-3 mt-md-0">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                            required>
-                    </div>
-                </div>
-                <div class="form-group mt-3">
-                    <select name="Orden" class="form-control" name="subject" id="subject" placeholder="Orden" required>
-                        <option value="escritorio">Escritorio</option>
-                        <option value="silla">Silla</option>
-                        <option value="sillon">Sillon</option>
-                        <option value="mesa">Mesa</option>
-                    </select>
-                </div>
-                <div class="form-group mt-3">
-                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                </div>
-                <div class="my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your order has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Send Order</button></div>
-            </form>
+    <form action="{% url 'ordenes' %}" method="POST"> {% csrf_token %}
+        <div style="display: flex; text-align: center; ">
+            <div style="align-items: center; text-align: center;">
+                <input type="text" name="name" placeholder="Name" class="text-center" style="margin: 30px;">
+                <input type="text" name="email" placeholder="Email" class="text-center"
+                    style="margin: 30px; width: 10cm;">
+            </div>
         </div>
+        <select name="product" class="form-control" name="subject" id="subject" placeholder="Orden"
+            style="text-align: center;" required>
+            <option value="escritorio">Escritorio</option>
+            <option value="silla">Silla</option>
+            <option value="sillon">Sillon</option>
+            <option value="mesa">Mesa</option>
+        </select>
+        <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="text-center" style="margin: 1cm"><button type="submit">Send Order</button></div>
+    </form>
+
 </section><!-- End Contact Section -->
 {% endblock %}

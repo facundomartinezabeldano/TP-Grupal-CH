@@ -43,7 +43,7 @@ class Orden (models.Model):
         ('Mesa', 'Mesa')
     )
     name = models.CharField(max_length=30)
-    email = models.EmailField
+    email = models.EmailField(default='NaN')
     product = models.CharField(
         max_length=30,
         choices=choices)
