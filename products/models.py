@@ -44,7 +44,7 @@ class Orden (models.Model):
     )
     name = models.CharField(max_length=30)
     email = models.EmailField
-    producto = models.CharField(
+    product = models.CharField(
         max_length=30,
         choices=choices)
     message = models.CharField(max_length=300)
