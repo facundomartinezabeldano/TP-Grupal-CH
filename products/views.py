@@ -1,9 +1,8 @@
+from unicodedata import name
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import *
 from itertools import chain
-from .forms import *
-
 # Create your views here.
 
 
@@ -39,6 +38,27 @@ def order(request):
             message=message
         )
         orden.save()
+    return render(request=request, template_name=template, context={})
+
+
+def add_product(request):
+    template = 'add_product.html'
+    if request.method == 'POST':
+        payload = request.POST
+        options = {
+            'Escritorio': Escritorio,
+            'Silla': Silla,
+            'Mesa': Mesa,
+            'Sillon': Sillon
+        }
+        options[payload['product']](
+            nombre=payload['name'],
+            color=payload['color'],
+            altura=payload['altura'],
+            material=payload['material'],
+            precio=payload['precio'],
+            stock=True
+        ).save()
     return render(request=request, template_name=template, context={})
 
 

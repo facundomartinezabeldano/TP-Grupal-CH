@@ -15,9 +15,9 @@
     <form action="{% url 'ordenes' %}" method="POST"> {% csrf_token %}
         <div style="display: flex; text-align: center; ">
             <div style="align-items: center; text-align: center;">
-                <input type="text" name="name" placeholder="Name" class="text-center" style="margin: 30px;">
+                <input type="text" name="name" placeholder="Name" class="text-center" style="margin: 30px; width: 13cm">
                 <input type="text" name="email" placeholder="Email" class="text-center"
-                    style="margin: 30px; width: 10cm;">
+                    style="margin: 30px; width: 13cm;">
             </div>
         </div>
         <select name="product" class="form-control" name="subject" id="subject" placeholder="Orden"
