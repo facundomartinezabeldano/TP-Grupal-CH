@@ -1,6 +1,6 @@
 {% extends "products/index.html"%}
 {% load static %}
-{% block content %}
+{% block order %}
 
 <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">
@@ -28,7 +28,8 @@
             <option value="mesa">Mesa</option>
         </select>
         <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required
+                style="text-align: center;"></textarea>
         </div>
         <div class="text-center" style="margin: 1cm"><button type="submit">Send Order</button></div>
     </form>
